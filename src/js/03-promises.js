@@ -9,7 +9,7 @@ formEl.addEventListener('submit', onSubmitForm);
 function onSubmitForm(evt) {
   evt.preventDefault();
   let timerDelay = Number(delayEl.value);
-  for (let i = 0; i < Number(amountEl.value); i += 1) {
+  for (let i = 1; i <= Number(amountEl.value); i += 1) {
     createPromise(i, timerDelay)
       .then(({ position, delay }) => {
         console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
