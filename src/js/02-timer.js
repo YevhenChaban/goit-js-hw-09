@@ -46,7 +46,7 @@ function onStartBtnClick(evt) {
 
 function startTimer() {
   const distance = chosenDate - Date.now();
-  formatedDate = convertMs(distance);
+  const formatedDate = convertMs(distance);
   renderDate(formatedDate);
   if (
     secondsEl.textContent === '00' &&
